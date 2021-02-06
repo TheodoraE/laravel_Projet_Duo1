@@ -36,6 +36,7 @@
 </head>
 
 <body>
+  
   {{-- Header --}}
   @include('partials.header')
 

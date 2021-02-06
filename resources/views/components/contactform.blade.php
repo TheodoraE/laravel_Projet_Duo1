@@ -1,6 +1,6 @@
 <!-- ======= Contact Section ======= -->
-<section id="contact" class="contact section-bg">
-    <div class="container">
+<section id="contact" class="contact section-bg mt-5 mb-5">
+    <div class="container pb-5 mb-5">
 
         <div class="section-title">
         <h2>Contact</h2>

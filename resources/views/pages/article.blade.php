@@ -1,6 +1,5 @@
 @extends('template.main')
 
 @section('content')
-
-    @include('partials.home')
+    @include('components.cards')
 @endsection

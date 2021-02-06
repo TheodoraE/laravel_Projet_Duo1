@@ -5,19 +5,20 @@
         <div class="container">
             <div class="row">
             <div class="col-lg-6 pt-2 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                <h1>Easy Marketing Solutions For Your Business</h1>
+                <h1>{{$home1content[0]->title}}</h1>
                 <ul>
-                    <li><i class="ri-check-line"></i> Dolorem ratione dolorum</li>
-                    <li><i class="ri-check-line"></i> Quo nihil natus ea non pariatur optio occaecati</li>
-                    <li><i class="ri-check-line"></i> Duis aute irure dolor in reprehenderit in</li>
+                    @foreach ($home1Links as $link)
+                        <li><i class="{{$link->icon}}"></i> {{$link->link}}</li>
+                    @endforeach
                 </ul>
                 <div class="mt-3">
-                    <a href="/about" class="btn-get-started scrollto">Get Started</a>
-                    <a href="" class="btn-get-quote">Request a Quote</a>
+                    @foreach ($homeButtons as $btn)
+                        <a href="{{$btn->src}}" class="btn-get-started scrollto">{{$btn->btn}}</a>
+                    @endforeach
                 </div>
             </div>
             <div class="col-lg-6 order-1 order-lg-2 hero-img">
-                <img src="{{asset('img/hero-img.png')}}" class="img-fluid" alt="">
+                <img src="{{asset($home1content[0]->img)}}" class="img-fluid" alt="">
             </div>
             </div>
         </div>
@@ -30,26 +31,23 @@
     
             <div class="row content">
             <div class="col-lg-6">
-                <h2>Eum ipsam laborum deleniti velitena</h2>
-                <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assum perenda sruen jonee trave</h3>
+                <h2>{{$home2content[0]->title}}</h2>
+                <h3>{{$home2content[0]->title2}}</h3>
                 <div>
-                    <img src="{{asset('img/tech.jpeg')}}" alt="image venant d'internet">
+                    <img src="{{asset($home2content[0]->img)}}" alt="image venant d'internet" height="200px">
                 </div>
             </div>
             <div class="col-lg-6 pt-4 pt-lg-0">
                 <p>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                culpa qui officia deserunt mollit anim id est laborum
+                {{$home2content[0]->para}}
                 </p>
                 <ul>
-                <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequa</li>
-                <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
-                <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</li>
+                    @foreach ($home2Links as $link)
+                        <li><i class="{{$link->icon}}"></i>{{$link->link}}</li>
+                    @endforeach
                 </ul>
                 <p class="font-italic">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.
+                {{$home2content[0]->span}}
                 </p>
             </div>
             </div>

@@ -3,14 +3,24 @@
         <div class="form-group">
           @csrf
 
-          {{-- Name --}}
-          <label for="">Name : 
-            <input type="text" name="name">
+          {{-- Title --}}
+          <label for="">Title : 
+            <input type="text" name="title">
           </label> <br>
 
-          {{-- Class --}}
-          <label for="">Class : 
-            <input type="text" name="class">
+          {{-- Num --}}
+          <label for="">Num : 
+            <input type="text" name="num">
+          </label> <br>
+
+          {{-- Lorem --}}
+          <label for="">Lorem : 
+            <input type="text" name="lorem">
+          </label> <br>
+
+          {{-- P --}}
+          <label for="">P : 
+            <input type="text" name="p">
           </label> <br>
 
           {{-- Created_at --}}

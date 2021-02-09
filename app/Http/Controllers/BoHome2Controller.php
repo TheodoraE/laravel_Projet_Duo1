@@ -22,5 +22,13 @@ class BoHome2Controller extends Controller
         return view('backoffice/pages/boHome2', compact('headerTitle', 'headerLinks', 'home2content', 'home2Links'));
     }
 
-    
+    public function store(Request $request){
+        $store = new Home2Link;
+
+        $store->icon = $request->icon;
+        $store->link = $request->link;
+
+        $store->save();
+        return redirect()->back();
+    }
 }

@@ -20,4 +20,14 @@ class BoFooterController extends Controller
 
         return view('backoffice/pages/boFooter', compact('headerTitle', 'headerLinks', 'footerCopy', 'footerIcons'));
     }
+
+    public function store(Request $request){
+        $store = new FooterIcon;
+
+        $store->name = $request->name;
+        $store->class = $request->class;
+
+        $store->save();
+        return redirect()->back();
+    }
 }

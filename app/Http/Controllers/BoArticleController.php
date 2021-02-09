@@ -19,4 +19,16 @@ class BoArticleController extends Controller
         
         return view('backoffice/pages/boArticle', compact('articleData', 'headerTitle', 'headerLinks'));
     }
+
+    public function store(Request $request){
+        $store = new Article;
+
+        $store->title = $request->title;
+        $store->num = $request->num;
+        $store->lorem = $request->lorem;
+        $store->p = $request->p;
+
+        $store->save();
+        return redirect()->back();
+    }
 }

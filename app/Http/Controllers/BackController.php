@@ -34,5 +34,14 @@ class BackController extends Controller
         return view('backoffice/backoffice', compact('home1content', 'home1Links', 'homeButtons', 'home2content', 'home2Links', 'headerTitle', 'headerLinks', 'footerCopy', 'footerIcons'));
     }
 
+    public function store(Request $request){
+        $store = new HeaderLink;
+
+        $store->name = $request->name;
+        $store->route = $request->route;
+
+        $store->save();
+        return redirect()->back();
+    }
 
 }

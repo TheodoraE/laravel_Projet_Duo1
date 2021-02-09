@@ -27,17 +27,21 @@ Route::get('/contact', [ContactController::class, 'index']);
 
 // Backoffice
 Route::get('/backoffice', [BackController::class, 'index']);
+Route::post('/add_link', [BackController::class, 'store']);
 
 // BOHome1
 Route::get('/bohome1', [BoHome1Controller::class, 'index']);
-
+Route::post('/add_link', [BoHome1Controller::class, 'store']);
 
 // BOHome2
 Route::get('/bohome2', [BoHome2Controller::class, 'index']);
+Route::post('/add_link', [BoHome2Controller::class, 'store']);
 
 
 // BOArticle
 Route::get('/boarticle', [BoArticleController::class, 'index']);
+Route::post('/add_link', [BoArticleController::class, 'store']);
 
 // BOFooter
 Route::get('/bofooter', [BoFooterController::class, 'index']);
+Route::post('/add_link', [BoFooterController::class, 'store']);

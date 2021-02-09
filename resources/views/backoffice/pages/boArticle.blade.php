@@ -2,5 +2,5 @@
 
 @section('content')
     @include('backoffice.partials.tableCards')
-    {{-- @include('backoffice.partials.formCards') --}}
+    @include('backoffice.partials.formArticle')
 @endsection

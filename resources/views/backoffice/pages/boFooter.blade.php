@@ -2,5 +2,5 @@
 
 @section('content')
     @include('backoffice.partials.tableFooter')
-    {{-- @include('backoffice.partials.formFooter') --}}
+    @include('backoffice.partials.formFooter')
 @endsection

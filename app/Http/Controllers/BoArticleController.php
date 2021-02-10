@@ -31,4 +31,11 @@ class BoArticleController extends Controller
         $store->save();
         return redirect()->back();
     }
+
+    public function destroy($id)
+    {
+        $destroy = Article::find($id);
+        $destroy->delete();
+        return redirect()->back();
+    }
 }

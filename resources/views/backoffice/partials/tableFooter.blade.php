@@ -16,7 +16,13 @@
               <td>{{$icon->name}}</td>
               <td>{{$icon->class}}</td>   
               <td>{{$icon->created_at}}</td>
-              <td>{{$icon->updated_at}}</td>             
+              <td>{{$icon->updated_at}}</td>
+              <td>
+                <form action="/delete-linkFooter/{{$link->id}}" method="POST">
+                  @csrf
+                  <button type="submit" class="btn btn-danger">DELETE</button>
+                </form>
+              </td>              
             </tr>
           @endforeach
         </tbody>

@@ -30,6 +30,11 @@ class BoFooterController extends Controller
         $store->save();
         return redirect()->back();
     }
-}
-$destroy = 
 
+    public function destroy($id)
+    {
+        $destroy = FooterIcon::find($id);
+        $destroy->delete();
+        return redirect()->back();
+    }
+}

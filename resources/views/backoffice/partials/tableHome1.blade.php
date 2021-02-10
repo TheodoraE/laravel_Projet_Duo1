@@ -16,7 +16,15 @@
               <td>{{$link->icon}}</td>
               <td>{{$link->link}}</td>   
               <td>{{$link->created_at}}</td>
-              <td>{{$link->updated_at}}</td>             
+              <td>{{$link->updated_at}}</td>  
+              <td>
+              <form action="/footer-delete/{{$footer->id}}" method="post">
+              <button type="submit" class="btn btn-danger">DELETE</button>
+              
+              <form action="/article-delete/{{$footer->id}}" method="post">
+              <button type="submit" class="btn btn-danger">DELETE</button>
+              </td> 
+                        
             </tr>
           @endforeach
         </tbody>

@@ -31,3 +31,5 @@ class BoFooterController extends Controller
         return redirect()->back();
     }
 }
+$destroy = 
+

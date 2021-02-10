@@ -1,5 +1,5 @@
 <section class="container">
-    <form action="/add_link" method="POST">
+    <form action="/add_linkHeader" method="POST">
         <div class="form-group">
           @csrf
 
@@ -12,16 +12,6 @@
           <label for="">Route : 
             <input type="text" name="route">
           </label> <br>
-
-          {{-- Created_at --}}
-          <label for="">Created at : 
-            <input type="text" name="created_at">
-          </label> <br>
-
-          {{-- Updated_at --}}
-          <label for="">Updated at : 
-            <input type="text" name="updated_at">
-          </label>
 
         </div>
 

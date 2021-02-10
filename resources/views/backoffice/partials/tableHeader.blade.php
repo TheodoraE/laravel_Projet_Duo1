@@ -7,6 +7,7 @@
             <th scope="col">Route</th>
             <th scope="col">Created_at</th>
             <th scope="col">Updated_at</th>
+            <th scope="col"> </th>
           </tr>
         </thead>
         <tbody>
@@ -16,7 +17,13 @@
               <td>{{$link->name}}</td>
               <td>{{$link->route}}</td>   
               <td>{{$link->created_at}}</td>
-              <td>{{$link->updated_at}}</td>             
+              <td>{{$link->updated_at}}</td>
+              <td>
+                <form action="/delete-linkHeader/{{$link->id}}" method="POST">
+                  @csrf
+                  <button type="submit" class="btn btn-danger">DELETE</button>
+                </form>
+              </td>             
             </tr>
           @endforeach
         </tbody>

@@ -1,5 +1,5 @@
 <section class="container">
-    <form action="/add_link" method="POST">
+    <form action="/add_linkHome1" method="POST">
         <div class="form-group">
           @csrf
 
@@ -8,20 +8,10 @@
             <input type="text" name="icon">
           </label> <br>
 
-          {{-- RoLinkute --}}
+          {{-- Link --}}
           <label for="">Link : 
             <input type="text" name="link">
           </label> <br>
-
-          {{-- Created_at --}}
-          <label for="">Created at : 
-            <input type="text" name="created_at">
-          </label> <br>
-
-          {{-- Updated_at --}}
-          <label for="">Updated at : 
-            <input type="text" name="updated_at">
-          </label>
 
         </div>
 

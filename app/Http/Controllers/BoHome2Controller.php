@@ -31,4 +31,11 @@ class BoHome2Controller extends Controller
         $store->save();
         return redirect()->back();
     }
+
+    public function destroy($id)
+    {
+        $destroy = Home2Link::find($id);
+        $destroy->delete();
+        return redirect()->back();
+    }
 }

@@ -44,4 +44,10 @@ class BackController extends Controller
         return redirect()->back();
     }
 
+    public function destroy($id)
+    {
+        $destroy = HeaderLink::find($id);
+        $destroy->delete();
+        return redirect()->back();
+    }
 }

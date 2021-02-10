@@ -27,21 +27,23 @@ Route::get('/contact', [ContactController::class, 'index']);
 
 // Backoffice
 Route::get('/backoffice', [BackController::class, 'index']);
-Route::post('/add_link', [BackController::class, 'store']);
+Route::post('/add_linkHeader', [BackController::class, 'store']);
+Route::post('/delete-linkHeader/{id}', [BackController::class, 'destroy']);
 
 // BOHome1
 Route::get('/bohome1', [BoHome1Controller::class, 'index']);
-Route::post('/add_link', [BoHome1Controller::class, 'store']);
+Route::post('/add_linkHome1', [BoHome1Controller::class, 'store']);
+Route::post('/delete-linkHome1/{id}', [BoHome1Controller::class, 'destroy']);
 
 // BOHome2
 Route::get('/bohome2', [BoHome2Controller::class, 'index']);
-Route::post('/add_link', [BoHome2Controller::class, 'store']);
-
+Route::post('/add_linkHome2', [BoHome2Controller::class, 'store']);
+Route::post('/delete-linkHome2/{id}', [BoHome2Controller::class, 'destroy']);
 
 // BOArticle
 Route::get('/boarticle', [BoArticleController::class, 'index']);
-Route::post('/add_link', [BoArticleController::class, 'store']);
+Route::post('/add_linkArticle', [BoArticleController::class, 'store']);
 
 // BOFooter
 Route::get('/bofooter', [BoFooterController::class, 'index']);
-Route::post('/add_link', [BoFooterController::class, 'store']);
+Route::post('/add_linkFooter', [BoFooterController::class, 'store']);

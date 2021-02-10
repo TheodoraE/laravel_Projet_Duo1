@@ -18,7 +18,7 @@
               <td>{{$icon->created_at}}</td>
               <td>{{$icon->updated_at}}</td>
               <td>
-                <form action="/delete-linkFooter/{{$link->id}}" method="POST">
+                <form action="/delete-linkFooter/{{$icon->id}}" method="POST">
                   @csrf
                   <button type="submit" class="btn btn-danger">DELETE</button>
                 </form>

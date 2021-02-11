@@ -32,6 +32,12 @@ class BoHome2Controller extends Controller
         return redirect()->back();
     }
 
+    public function show($id)
+    {
+        $show = Home2Link::find($id);
+        return view('backoffice/pages/show', compact('show'));
+    }
+
     public function destroy($id)
     {
         $destroy = Home2Link::find($id);

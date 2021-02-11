@@ -31,6 +31,12 @@ class BoFooterController extends Controller
         return redirect()->back();
     }
 
+    public function show($id)
+    {
+        $show = FooterIcon::find($id);
+        return view('backoffice/pages/show', compact('show'));
+    }
+
     public function destroy($id)
     {
         $destroy = FooterIcon::find($id);

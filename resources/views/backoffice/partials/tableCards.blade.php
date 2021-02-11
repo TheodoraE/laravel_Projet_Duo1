@@ -23,7 +23,7 @@
               <td>{{$link->created_at}}</td>
               <td>{{$link->updated_at}}</td> --}}
               <td>
-                <a class="btn btn-primary" href="/show-link/{{$link->id}}">SHOW</a>
+                <a class="btn btn-primary" href="/show-card/{{$link->id}}">SHOW</a>
               </td>
               <td>
                 <form action="/delete-linkArticle/{{$link->id}}" method="POST">

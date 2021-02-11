@@ -4,9 +4,9 @@
           <tr>
             <th scope="col">#</th>
             <th scope="col">Name</th>
-            <th scope="col">Class</th>
+            {{-- <th scope="col">Class</th>
             <th scope="col">Created_at</th>
-            <th scope="col">Updated_at</th>
+            <th scope="col">Updated_at</th> --}}
           </tr>
         </thead>
         <tbody>
@@ -14,9 +14,12 @@
             <tr>
               <th scope="row">{{$icon->id}}</th>
               <td>{{$icon->name}}</td>
-              <td>{{$icon->class}}</td>   
+              {{-- <td>{{$icon->class}}</td>   
               <td>{{$icon->created_at}}</td>
-              <td>{{$icon->updated_at}}</td>
+              <td>{{$icon->updated_at}}</td> --}}
+              <td>
+                <a class="btn btn-primary" href="/show-foot/{{$icon->id}}">SHOW</a>
+              </td>
               <td>
                 <form action="/delete-linkFooter/{{$icon->id}}" method="POST">
                   @csrf

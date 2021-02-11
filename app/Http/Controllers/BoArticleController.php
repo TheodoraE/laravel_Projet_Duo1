@@ -32,6 +32,12 @@ class BoArticleController extends Controller
         return redirect()->back();
     }
 
+    public function show($id)
+    {
+        $show = Article::find($id);
+        return view('backoffice/pages/show', compact('show'));
+    }
+
     public function destroy($id)
     {
         $destroy = Article::find($id);

@@ -44,6 +44,7 @@ Route::post('/delete-linkHome2/{id}', [BoHome2Controller::class, 'destroy']);
 Route::get('/boarticle', [BoArticleController::class, 'index']);
 Route::post('/add_linkArticle', [BoArticleController::class, 'store']);
 Route::post('/delete-linkArticle/{id}', [BoArticleController::class, 'destroy']);
+Route::get('/show-link/{id}', [BoArticleController::class, 'show']);
 
 // BOFooter
 Route::get('/bofooter', [BoFooterController::class, 'index']);

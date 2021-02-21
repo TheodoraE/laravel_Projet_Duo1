@@ -4,14 +4,16 @@
           @csrf
 
           {{-- Name --}}
-          <label for="">Name : 
+          <div class="form-group">
+            <label for="">Name : </label>
             <input type="text" name="name">
-          </label> <br>
+          </div>
 
           {{-- Route --}}
-          <label for="">Route : 
+          <div class="form-group">
+            <label for="">Route : </label>
             <input type="text" name="route">
-          </label> <br>
+          </div>
 
         </div>
 

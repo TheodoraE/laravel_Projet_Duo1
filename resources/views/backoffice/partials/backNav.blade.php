@@ -6,7 +6,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link active" href="{{$headerLinks[3]->route}}">{{$headerLinks[3]->name}} <span class="sr-only">(current)</span></a>
+            <a class="nav-link active" href="/">FrontOffice <span class="sr-only">(current)</span></a>
             <a class="nav-link" href="{{$headerLinks[3]->route}}">Header links/i</a>
             <a class="nav-link" href="/bohome1">Home1 li/icons</a>
             <a class="nav-link " href="/bohome2">Home2 li/icons</a>

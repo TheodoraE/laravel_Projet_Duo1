@@ -7,6 +7,8 @@
             {{-- <th scope="col">Class</th>
             <th scope="col">Created_at</th>
             <th scope="col">Updated_at</th> --}}
+            <th scope="col"> </th>
+            <th scope="col"> </th>
           </tr>
         </thead>
         <tbody>
@@ -18,7 +20,7 @@
               <td>{{$icon->created_at}}</td>
               <td>{{$icon->updated_at}}</td> --}}
               <td>
-                <a class="btn btn-primary" href="/show-foot/{{$icon->id}}">SHOW</a>
+                <a class="btn btn-primary" href="/show-linkFooter/{{$icon->id}}">SHOW</a>
               </td>
               <td>
                 <form action="/delete-linkFooter/{{$icon->id}}" method="POST">

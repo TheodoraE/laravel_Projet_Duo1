@@ -35,7 +35,8 @@ class BoArticleController extends Controller
     public function show($id)
     {
         $show = Article::find($id);
-        return view('backoffice/pages/show', compact('show'));
+        $headerLinks = HeaderLink::all();
+        return view('backoffice/pages/showArticle', compact('show', 'headerLinks'));
     }
 
     public function destroy($id)

@@ -32,10 +32,29 @@ class BoHome2Controller extends Controller
         return redirect()->back();
     }
 
+    public function edit($id)
+    {
+        $edit = Home2Link::find($id);
+        $headerLinks = HeaderLink::all();
+        return view('backoffice/pages/editHome2', compact('edit', 'headerLinks'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $update = Home2Link::find($id);
+
+        $update->icon = $request->icon;
+        $update->link = $request->link;
+
+        $update->save();
+        return redirect('/show-linkHome2/'.$update->id);
+    }
+
     public function show($id)
     {
         $show = Home2Link::find($id);
-        return view('backoffice/pages/show', compact('show'));
+        $headerLinks = HeaderLink::all();
+        return view('backoffice/pages/showHome2', compact('show', 'headerLinks'));
     }
 
     public function destroy($id)

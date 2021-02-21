@@ -4,14 +4,16 @@
           @csrf
 
           {{-- Icon --}}
-          <label for="">Icon : 
+          <div class="form-group">
+            <label for="">Icon : </label>
             <input type="text" name="icon">
-          </label> <br>
+          </div>
 
           {{-- Link --}}
-          <label for="">Link : 
+          <div class="form-group">
+            <label for="">Link : </label>
             <input type="text" name="link">
-          </label> <br>
+          </div>
 
         </div>
 

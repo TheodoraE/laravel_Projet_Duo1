@@ -1,18 +1,18 @@
 <section class="container">
-    <form action="/add_linkHome1" method="POST">
+    <form action="/update-linkHome1/{{$edit->id}}" method="POST">
         <div class="form-group">
           @csrf
 
           {{-- Icon --}}
           <div class="form-group">
             <label for="">Icon : </label>
-            <input type="text" name="icon">
+            <input type="text" name="icon" value="{{$edit->icon}}">
           </div>
 
           {{-- Link --}}
           <div class="form-group">
             <label for="">Link : </label>
-            <input type="text" name="link">
+            <input type="text" name="link" value="{{$edit->link}}">
           </div>
 
         </div>

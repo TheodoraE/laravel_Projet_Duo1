@@ -30,7 +30,7 @@ class BackController extends Controller
         // Footer
         $footerCopy = FooterCopy::all();
         $footerIcons = FooterIcon::all();
-        
+
         return view('backoffice/backoffice', compact('home1content', 'home1Links', 'homeButtons', 'home2content', 'home2Links', 'headerTitle', 'headerLinks', 'footerCopy', 'footerIcons'));
     }
 
@@ -47,7 +47,25 @@ class BackController extends Controller
     public function show($id)
     {
         $show = HeaderLink::find($id);
-        return view('backoffice/pages/show', compact('show'));
+        $headerLinks = HeaderLink::all();
+        return view('backoffice/pages/showHeader', compact('show', 'headerLinks'));
+    }
+
+    public function edit($id)
+    {
+        $edit = HeaderLink::find($id);
+        $headerLinks = HeaderLink::all();
+        return view('backoffice/pages/editHeader', compact('edit', 'headerLinks'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $update = HeaderLink::find($id);
+        $update->name = $request->name;
+        $update->route = $request->route;
+
+        $update->save();
+        return redirect('/show-linkHeader/'.$update->id);
     }
 
     public function destroy($id)

@@ -4,24 +4,28 @@
           @csrf
 
           {{-- Title --}}
-          <label for="">Title : 
+          <div class="form-group">
+            <label for="">Title : </label>
             <input type="text" name="title">
-          </label> <br>
+          </div>
 
           {{-- Num --}}
-          <label for="">Num : 
+          <div class="form-group">
+            <label for="">Num : </label>
             <input type="text" name="num">
-          </label> <br>
+          </div>
 
           {{-- Lorem --}}
-          <label for="">Lorem : 
+          <div class="form-group">
+            <label for="">Lorem : </label>
             <input type="text" name="lorem">
-          </label> <br>
+          </div>
 
           {{-- P --}}
-          <label for="">P : 
+          <div class="form-group">
+            <label for="">P : </label>
             <input type="text" name="p">
-          </label> <br>
+          </div>
 
         </div>
 

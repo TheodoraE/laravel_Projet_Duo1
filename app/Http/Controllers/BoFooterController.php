@@ -34,7 +34,26 @@ class BoFooterController extends Controller
     public function show($id)
     {
         $show = FooterIcon::find($id);
-        return view('backoffice/pages/show', compact('show'));
+        $headerLinks = HeaderLink::all();
+        return view('backoffice/pages/showFooter', compact('show', 'headerLinks'));
+    }
+    
+    public function edit($id)
+    {
+        $edit = FooterIcon::find($id);
+        $headerLinks = HeaderLink::all();
+        return view('backoffice/pages/editFooter', compact('edit', 'headerLinks'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $update = FooterIcon::find($id);
+
+        $update->icon = $request->icon;
+        $update->link = $request->link;
+
+        $update->save();
+        return redirect('/show-linkFooter/'.$update->id);
     }
 
     public function destroy($id)
